@@ -1,0 +1,57 @@
+Arguments: 
+  /Users/matheus/.nvm/versions/node/v16.14.2/bin/node /opt/homebrew/bin/yarn
+
+PATH: 
+  /Users/matheus/.nvm/versions/node/v16.14.2/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/matheus/.nvm/versions/node/v16.14.2/bin:/Users/matheus/.zinit/polaris/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/matheus/development/flutter/bin:/Users/matheus/go/bin:/opt/homebrew/opt/go/libexec/bin:/Users/matheus/development/flutter/bin:/Users/matheus/go/bin:/opt/homebrew/opt/go/libexec/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.14.2
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://pkgs.dev.azure.com/al5bank/AL5-DB1/_packaging/al5bank-libraries/npm/registry/amqplib: The package 'amqplib' was not found in feed 'al5bank-libraries'
+      at Request.params.callback [as _callback] (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:67029:18)
+      at Request.self.callback (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (node:events:526:28)
+      at Request.<anonymous> (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (node:events:526:28)
+      at IncomingMessage.<anonymous> (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:645:28)
+      at IncomingMessage.emit (node:events:538:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "dead-letter-exchanges",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "run:api": "ts-node-dev --transpile-only --ignore-watch node_modules ./src/api/index.ts",
+      "run:barConsumer": "ts-node-dev --transpile-only --ignore-watch node_modules ./src/barConsumer/index.ts",
+      "run:kitchenConsumer": "ts-node-dev --transpile-only --ignore-watch node_modules ./src/kitchenConsumer/index.ts"
+    },
+    "devDependencies": {
+      "@types/amqplib": "^0.8.2",
+      "@types/express": "^4.17.13",
+      "@types/node": "^16.11.8",
+      "typescript": "^4.5.2"
+    },
+    "dependencies": {
+      "amqplib": "^0.8.0",
+      "express": "^4.17.1",
+      "ts-node-dev": "^1.1.8"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
